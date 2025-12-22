@@ -11,6 +11,6 @@ class BookApiTest extends TestCase
         $response = $this->getJson('/api/books');
 
         $response->assertStatus(200)
-                 ->assertJson(['message' => 'List of books']);
+            ->assertJson(['message' => 'List of books']);
     }
 }
