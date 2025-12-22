@@ -2,9 +2,14 @@ name: Laravel CI (Backend Quality)
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+      - dev
+      - "feature/**"
   pull_request:
-    branches: ["main"]
+    branches:
+      - main
+      - dev
 
 jobs:
   laravel-tests:
