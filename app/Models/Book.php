@@ -16,4 +16,9 @@ class Book extends Model
         'price',
         'user_id',
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }
