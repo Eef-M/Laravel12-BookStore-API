@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::all();
+        $books = Book::with('reviews')->paginate(10);
 
         return response()->json([
             'message' => 'List of books retrieved successfully',

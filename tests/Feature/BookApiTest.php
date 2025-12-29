@@ -19,7 +19,7 @@ class BookApiTest extends TestCase
 
         $response->assertStatus(200)
             ->assertJsonStructure(['message', 'data'])
-            ->assertJsonCount(3, 'data');
+            ->assertJsonPath('data.total', 3);
     }
 
     public function test_public_user_can_view_single_book()
